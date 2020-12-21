@@ -29,7 +29,7 @@ def scrape(artist, song):
         soup = bs(i.get_attribute('innerHTML'), 'html.parser')
         if(l.text.lower() in relevant_info):
             urls += [i.attrs['href'] for i in soup.find_all('a')]
-        if(abs(t - datetime.now().second) > 10):
+        if(abs(t - datetime.now().second) > 20):
             break
     urls = list(set(urls))
 
@@ -46,5 +46,7 @@ def scrape(artist, song):
     driver.close()
 
     sims = pd.DataFrame(similars.values(), similars.keys()).reset_index()
+    if(df.shape[0] == 0):
+        return "Timeout error."
     sims.columns = ['Artist', 'Song']
     return sims.to_string(index=False)
