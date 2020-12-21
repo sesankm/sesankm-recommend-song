@@ -7,18 +7,18 @@
 ## How to use
 <strong>Curl</strong>
 ```
-curl -X GET https://sesankm-recommend-song.herokuapp.com/recommendmusic -H "Content-type:application/json" -d "{"input":"drake-gods plan"}"
+curl -X GET https://sesankm-recommend-song.herokuapp.com/recommendc -H "Content-type:application/json" -d "{"input":"drake-gods plan"}"
 ```
 Curl on windows:
 ```
-curl -X GET https://sesankm-recommend-song.herokuapp.com/recommendmusic -H "Content-type:application/json" -d "{\"input\":\"drake-gods plan\"}"
+curl -X GET https://sesankm-recommend-song.herokuapp.com/recommend -H "Content-type:application/json" -d "{\"input\":\"drake-gods plan\"}"
 ```
 
 <strong>Python</strong>
 ```
 import requests
 
-url = "https://sesankm-recommend-song.herokuapp.com/recommendmusic"
+url = "https://sesankm-recommend-song.herokuapp.com/recommend"
 headers = {"Content-Type": "application/json"}
 data = {"input": "Drake-gods plan"}
 
