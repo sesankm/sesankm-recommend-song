@@ -34,6 +34,5 @@ print(r.json)
 	git clone https://github.com/sesankm/song-recommender
 	pip install -r local_requirements.txt
 	# copy chromedriver executable into the same directory git repo
-	python -i main.py
-	scrape("drake", "gods plan")
+	python recommend.py "drake-gods plan"
 	```
