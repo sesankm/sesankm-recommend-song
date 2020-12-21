@@ -46,7 +46,7 @@ def scrape(artist, song):
     driver.close()
 
     sims = pd.DataFrame(similars.values(), similars.keys()).reset_index()
-    if(df.shape[0] == 0):
+    if(sims.shape[0] == 0):
         return "Timeout error."
     sims.columns = ['Artist', 'Song']
     return sims.to_string(index=False)
