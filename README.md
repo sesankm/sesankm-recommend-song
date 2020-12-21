@@ -26,3 +26,14 @@ r = requests.get(url, headers=headers, json=data)
 
 print(r.json)
 ```
+
+* requests timeout after 30 seconds for heroku apps
+* if this happens, you can run the code locally
+	[Download chromedriver version 87] (http://chromedriver.chromium.org/downloads)
+	```
+	git clone https://github.com/sesankm/song-recommender
+	pip install -r local_requirements.txt
+	# copy chromedriver executable into the same directory git repo
+	python -i main.py
+	scrape("drake", "gods plan")
+	```
