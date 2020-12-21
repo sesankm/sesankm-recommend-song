@@ -40,7 +40,7 @@ def scrape(artist, song):
         for i,j in zip(songs, artists):
             if(i.text.lower() != song.lower()):
                 similars[j.text.split(', ')[0]] = i.text
-        if(abs(t - datetime.now().second) > 14):
+        if(abs(t - datetime.now().second) > 20):
             break
 
     driver.close()
