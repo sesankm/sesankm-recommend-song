@@ -28,8 +28,8 @@ print(r.json)
 ```
 
 * requests timeout after 30 seconds for heroku apps
-* if this happens, you can run the code locally
-	[Download chromedriver version 87] (http://chromedriver.chromium.org/downloads)
+* if this happens, you can run the code locally <br>
+	[Download chromedriver version 87](http://chromedriver.chromium.org/downloads)
 	```
 	git clone https://github.com/sesankm/song-recommender
 	pip install -r local_requirements.txt
