@@ -29,8 +29,8 @@ def scrape(artist, song):
         soup = bs(i.get_attribute('innerHTML'), 'html.parser')
         if(l.text.lower() in relevant_info):
             urls += [i.attrs['href'] for i in soup.find_all('a')]
-        if(abs(t - datetime.now().second) > 20):
-            return "Time out"
+        if(abs(t - datetime.now().second) > 10):
+            break
     urls = list(set(urls))
 
     for url in urls:
@@ -40,8 +40,8 @@ def scrape(artist, song):
         for i,j in zip(songs, artists):
             if(i.text.lower() != song.lower()):
                 similars[j.text.split(', ')[0]] = i.text
-        if(abs(t - datetime.now().second) > 20):
-            return "Time out"
+        if(abs(t - datetime.now().second) > 25):
+            break
 
     driver.close()
 
