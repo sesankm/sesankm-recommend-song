@@ -18,7 +18,7 @@ curl -X GET https://sesankm-recommend-song.herokuapp.com/recommendmusic -H "Cont
 ```
 import requests
 
-url = "http://127.0.0.1:5000/reccomendmusic"
+url = "https://sesankm-recommend-song.herokuapp.com/recommendmusic"
 headers = {"Content-Type": "application/json"}
 data = {"input": "Drake-gods plan"}
 
