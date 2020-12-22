@@ -36,3 +36,4 @@ print(r.json)
 	# copy chromedriver executable into the same directory git repo
 	python recommend.py "drake-gods plan"
 	```
+* an empty reply from the server means that the app is in an idle state, try again in a few minutes
